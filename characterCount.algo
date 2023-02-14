@@ -1,0 +1,30 @@
+ALGORITHM algorithm_name
+VAR
+    str : STRING;
+    char : INTEGER :=0;
+    word : INTEGER :=0;
+    vowel : INTEGER :=0;
+BEGIN
+    write("enter your sentence");
+    read(str);
+    WHILE (str[char]<>".") DO
+        char := char+1;
+         IF (str[char]=" ") THEN
+        word := word+1;
+         END_IF
+
+        IF (str[char]="o" OR
+        str[char]="i" OR
+        str[char]="u" OR
+        str[char]="a" OR
+        str[char]="e" OR
+        str[char]="y") THEN
+            vowel := vowel+1;
+        END_IF
+   END_WHILE
+   char := char+1;
+   write("number of characters",char);
+   write("number of words",word);
+   write("number of vowels",vowel);
+END
+
